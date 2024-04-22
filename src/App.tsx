@@ -1,8 +1,11 @@
 import "./styles/index.css";
 import { Rectangle, Type } from "./components/Atoms";
 import Button from "./components/Molecules/Button";
+import { useTodos } from "./features/Auth/hooks/useTodos";
 
 function App() {
+  const {data} = useTodos();
+  console.log("data", data)
   return (
     <>
       <Rectangle transform={{ y: 60 }}>
